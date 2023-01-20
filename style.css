@@ -3,6 +3,7 @@ header {
 	text-align: center;
 	background-color: #484f59;
 	background-size: cover;
+	margin: 0 auto;
 }
 img {
       margin: 40px 0px 0px 0px;
@@ -18,9 +19,15 @@ h1 {
 h2 {
 	font-size: 35px;
 }
+a {
+	color: white;
+}
 ul {
-
+	background: rgba(0,0,0,0.5);
 }
 li {
 	display: inline;
+}
+p {
+	color: red;
 }
