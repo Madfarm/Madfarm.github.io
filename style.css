@@ -25,7 +25,8 @@ a {
 }
 ul {
 	list-style-type: none;
-	padding: 10px 20px 10px 20px;
+	padding: 0;
+	margin: 0;
 	background: rgba(0,0,0,0.5);
 	font-size: 30 px;
 	overflow: hidden;
@@ -38,8 +39,11 @@ li a {
 	padding: 0px 100px 0px 10px;
 	color: white;
 	text-align: center;
-	text-decoration;
+	text-decoration: none;
 }
-li a:hover {
+li a:hover:not(.active) {
 	background-color: #111;
+}
+.active {
+	background-color: #04AA6D;
 }
