@@ -6,20 +6,20 @@ header {
 }
 ul {
 	list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(0,0,0,0.5);
 }
 li {
 	float: left;
 }
 li a {
 	display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 60px;
-      text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
 }
 li a:hover {
 	background-color: #dd6b24;
