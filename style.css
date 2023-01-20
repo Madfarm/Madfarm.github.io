@@ -19,14 +19,13 @@ h1 {
 
 h2 {
 	font-size: 40px;
-	color: red;
 }
 ul {
 	list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #333;
+        background: rgba(0,0,0,0.5);
 }
 li {
 	float: left;
