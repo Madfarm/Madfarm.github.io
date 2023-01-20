@@ -24,11 +24,22 @@ a {
 	color: white;
 }
 ul {
+	list-style-type: none;
 	padding: 10px 20px 10px 20px;
 	background: rgba(0,0,0,0.5);
 	font-size: 30 px;
+	overflow: hidden;
 }
 li {
-	display: inline;
+	display: block;
+}
+li a {
+	display: block;
 	padding: 0px 100px 0px 10px;
+	color: white;
+	text-align: center;
+	text-decoration;
+}
+li a:hover {
+	background-color: #111;
 }
