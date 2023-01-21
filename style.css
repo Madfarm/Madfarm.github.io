@@ -28,7 +28,9 @@ ul {
       background: rgba(0,0,0,0.5);
 }
 li {
-	float: center;
+	float: left;
+      position: relative;
+      left: 300px;
 }
 li a {
 	display: block;
