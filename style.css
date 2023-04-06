@@ -9,6 +9,18 @@ body {
       align-items: center;
 }
 
+#menu-items {
+      margin-left: clamp(4rem, 20vw, 48rem);
+}
+
+#menu-items:hover > .menu-item {
+      opacity: 0.3
+}
+
+#menu-items:hover > .menu-item:hover {
+      opacity: 1;
+}
+
 .menu-item {
       color: white;
       font-size: clamp(3rem, 8vw, 8rem);
