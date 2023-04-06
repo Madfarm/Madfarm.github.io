@@ -1,44 +1,20 @@
-header {
-	text-align: center;
-	background-color: #484f59;
-	background-size: cover;
-	margin: 0 auto;
-}
-img {
-      margin: 40px 0px 0px 0px;
-      border: 7px solid #b3a69a;;
-      border-radius: 20px;
-      border-radius: 50%;
-      width: auto;
-      height: 200px;
-}
-h1 {
-
-	font-size: 60px;
+body {
+      background-color: rgb(20, 20, 20);
+      margin: 0px;
 }
 
-h2 {
-	font-size: 40px;
+#menu {
+      height: 100vh;
+      display: flex;
+      align-items: center;
 }
-ul {
-	list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: rgba(0,0,0,0.5);
-}
-li {
-	float: left;
-      position: relative;
-      left: 300px;
-}
-li a {
-	display: block;
+
+.menu-item {
       color: white;
-      text-align: center;
-      padding: 14px 60px;
+      font-size: clamp(3rem, 8vw, 8rem);
+      /* Need to choose a font */
+
+      display: block;
       text-decoration: none;
-}
-li a:hover {
-	background-color: #dd6b24;
+      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
 }
