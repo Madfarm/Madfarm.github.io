@@ -1,11 +1,56 @@
 :root {
-      --active-index: 0;
+      --active-index: 25;
 }
 
 body {
-      background-color: rgb(20, 20, 20);
+      background-color: black;
       margin: 0px;
 }
+
+#topbar{
+    width: 100%;  
+    z-index: 2;
+    margin: 0 auto;
+
+    position: fixed;
+    top: 2em;
+    left: clamp(0.25rem, 5vw, 10rem);
+    right: 0;
+}
+
+#name {
+      color: white;
+      margin: 0;
+      font-size: clamp(0.25rem, 5vw, 3rem);
+}
+
+#topbar-button{
+      position: absolute;
+      height: 100%;
+      top: 1rem;
+      width: 40%;
+      right: 4.8rem;
+
+      background: 0 0;
+      border: 0;
+}
+
+#icon {
+      margin: 0;
+      height: 40px;
+      width: 40px;
+      transform:rotate(45deg);
+
+      position: absolute;
+      right: 8%;
+      top: 0rem;
+
+      border: 1px white solid;
+
+
+}
+     
+
 
 #menu {
       height: 100vh;
@@ -29,7 +74,7 @@ body {
 
 .menu-item {
       color: white;
-      font-size: clamp(3rem, 8vw, 8rem);
+      font-size: clamp(3rem, 8vw, 4rem);
       /* Need to choose a font */
 
       display: block;
@@ -63,7 +108,7 @@ body {
 }
 
 #menu > #menu-background {
-      background-position: 0% calc(-25% * (var(--active-index, 0) + 1));
+      background-position:  25% calc(-25% * (var(--active-index, 0) + 1));
   }
 
 #menu-background-image {
@@ -78,7 +123,7 @@ body {
       z-index: 0;
 
       background-position: center 40%;
-      background-size: 110vmax;
+      background-size: 100%;
       opacity: 0.15;
 
       transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
@@ -90,5 +135,9 @@ body {
 }
 
 #menu > #menu-background-image {
-      background-position: center calc(45% + 5% * var(--active-index, 0));
-  }
+      background-position: center calc(40% + 5% * var(--active-index, 0));
+}
+
+main{
+      height: 10000px;
+}
