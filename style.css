@@ -125,6 +125,7 @@ body {
 
 #menu > #menu-background {
       background-position:  25% calc(-25% * (var(--active-index, 0) + 1));
+      transition: background-position 800ms ease;
   }
 
 #menu-background-image {
