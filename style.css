@@ -12,6 +12,9 @@ body {
     z-index: 2;
     margin: 0 auto;
 
+    display: flex;
+    justify-content: space-between;
+
     position: fixed;
     top: 2em;
     left: clamp(0.25rem, 5vw, 10rem);
@@ -25,14 +28,19 @@ body {
 }
 
 #topbar-button{
-      position: absolute;
       height: 100%;
-      top: 1rem;
       width: 40%;
-      right: 4.8rem;
-
+      
       background: 0 0;
       border: 0;
+}
+#topbar-button:hover > #icon {
+      scale: 1.5;
+}
+
+
+#topbar-button:hover > #icon > #icon-inner{
+      scale: 0.05;
 }
 
 #icon {
@@ -40,14 +48,22 @@ body {
       height: 40px;
       width: 40px;
       transform:rotate(45deg);
-
-      position: absolute;
-      right: 8%;
-      top: 0rem;
-
       border: 1px white solid;
 
+      position: relative;
+      left: 60%;
 
+      transition: scale 800ms ease;
+}
+#icon-inner {
+      margin: 0;
+      height: 40px;
+      width: 40px;
+      
+      border: 1px white solid;
+
+      position: relative;
+      transition: scale 800ms ease;
 }
      
 
