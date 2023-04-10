@@ -1,5 +1,9 @@
 :root {
       --active-index: 25;
+      --speed: 0;
+}
+* {
+      box-sizing: border-box;
 }
 html {
       scroll-behavior: smooth;
@@ -28,6 +32,8 @@ body {
       color: white;
       margin: 0;
       font-size: clamp(0.25rem, 5vw, 3rem);
+      
+      
 }
 
 #scrolled-name {
@@ -37,12 +43,19 @@ body {
       margin: 0;
       font-size: clamp(0.25rem, 5vw, 3rem);
 }
-.onload {
-      opacity: 0;
-}
+
 .hidden {
       opacity: 0;
-      transition: opacity 400ms ease-in-out;
+}
+.showing {
+      opacity: 1;
+      transition: opacity 800ms ease-in-out;
+}
+.onload-hide {
+      opacity: 0;
+}
+.onload-appear {
+      opacity: 1;
 }
 
 
@@ -130,7 +143,7 @@ body {
 }
 
 #menu-items:hover > .menu-item {
-      opacity: 0.3
+      opacity: 0.3;
 }
 
 #menu-items:hover > .menu-item:hover {
@@ -203,6 +216,25 @@ body {
 #menu > #menu-background-image {
       background-position: center calc(40% + 5% * var(--active-index, 0));
 }
+
+
+
+#logo-row {
+      height: 4rem;
+      display: flex;
+
+      justify-content: left;
+      align-items: center;
+      gap: 2em;
+}
+.fa-brands, .fa-solid{
+      transition: scale 400ms ease-in-out;
+}
+.fa-brands:hover, .fa-solid:hover  {
+      scale: 1.5;
+}
+
+
 
 main{
       height: 10000px;

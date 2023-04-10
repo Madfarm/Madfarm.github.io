@@ -7,10 +7,16 @@ const scrolledTitle = document.getElementById('scrolled-name')
 const topbar = document.getElementById('topbar');
 const backgroundImage = document.querySelector('#menu-background-image');
 
+scrolledTitle.classList.toggle('showing');
+title.classList.toggle('hidden');
 
-scrolledTitle.classList.add('onload');
 
-title.classList.add('hidden');
+scrolledTitle.classList.add('onload-hide')
+title.classList.add('onload-appear')
+
+
+
+
 
 const backgroundOptions = {
     rootMargin: "-250px 0px 0px 0px"
@@ -18,16 +24,29 @@ const backgroundOptions = {
 
 const backgroundImageObserver =  new IntersectionObserver(function(
     entries,
-    backgroundImageObserver
 ) {
     entries.forEach(entry => {
         if(!entry.isIntersecting){
+            
+            title.classList.remove('onload-appear');
+
+            scrolledTitle.classList.toggle('showing');
             scrolledTitle.classList.toggle('hidden');
+            
+
+            title.classList.toggle('showing');
             title.classList.toggle('hidden');
-            scrolledTitle.classList.remove('onload');
+            
+            scrolledTitle.classList.remove('onload-hide');
+
         } else {
-           title.classList.toggle('hidden');
-           scrolledTitle.classList.toggle('hidden');
+            title.classList.toggle('showing');
+            title.classList.toggle('hidden');
+
+            scrolledTitle.classList.toggle('hidden');
+            scrolledTitle.classList.toggle('showing');
+            
+
         }
     })
 }, backgroundOptions)
