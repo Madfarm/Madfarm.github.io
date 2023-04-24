@@ -143,11 +143,23 @@ main {
       flex-wrap: wrap;
       gap: 8px;
       width: calc(100% - 20px);
-
+      
 }
 
 .card {
       background-color: rgb(255, 255, 255, 0.1);
       height: 30vh;
       width: 25vw;
+      border-radius: 15px;
+      
+}
+
+#git-linkTop {
+      height: 20%;
+      border-bottom: 2px solid black;
+}
+
+#git-linkBottom {
+      height: 80%;
+      border-bottom: 2px solid black;
 }
