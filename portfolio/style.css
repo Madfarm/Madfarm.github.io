@@ -12,6 +12,8 @@ html {
 body {
       background-color: black;
       margin: 0px;
+      padding: 0px;
+      height: 100vh;
 }
 
 #topbar{
@@ -128,4 +130,24 @@ body {
 
       transition: opacity 800ms ease, scale 800ms ease;
 }
+main {
+      padding: 0 10vw 0 10vw;
+}
 
+#spacer {
+      height: 20vh;
+}
+
+#cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: calc(100% - 20px);
+
+}
+
+.card {
+      background-color: rgb(255, 255, 255, 0.1);
+      height: 30vh;
+      width: 25vw;
+}
