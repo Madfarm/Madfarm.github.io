@@ -34,6 +34,7 @@ body {
       color: white;
       margin: 0;
       font-size: clamp(0.25rem, 5vw, 3rem);
+
       
       
 }
@@ -132,10 +133,16 @@ body {
 }
 main {
       padding: 0 10vw 0 10vw;
+      background: radial-gradient(
+            600px circle at 160px 100px,
+            rgba(250, 214, 97, 0.4),
+            transparent 40%
+      );
+       
 }
 
 #spacer {
-      height: 20vh;
+      height: 30vh;
 }
 
 #cards {
@@ -148,9 +155,32 @@ main {
 
 .card {
       background-color: rgb(255, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255, 0.1);
       height: 30vh;
       width: 25vw;
       border-radius: 15px;
+      cursor: pointer;
+      position: relative;
+      
+}
+
+.card::before {
+      background: radial-gradient(
+            800px circle at 100px 100px,
+            rgba(255, 255, 255, 0.06),
+            transparent 40%
+      );
+
+      border-radius: inherit;
+      content: "";
+
+      position: absolute;
+      top: 0px;
+      left: 0px;
+
+      height: 100%;
+      width: 100%;
+
       
 }
 
