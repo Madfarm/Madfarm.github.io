@@ -1,0 +1,131 @@
+:root {
+      --active-index: 25;
+      --speed: 0;
+}
+* {
+      box-sizing: border-box;
+}
+html {
+      scroll-behavior: smooth;
+}
+
+body {
+      background-color: black;
+      margin: 0px;
+}
+
+#topbar{
+    width: 100%;  
+    z-index: 2;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 2em;
+    left: clamp(0.25rem, 5vw, 10rem);
+    right: 0;
+}
+
+#name {
+      color: white;
+      margin: 0;
+      font-size: clamp(0.25rem, 5vw, 3rem);
+      
+      
+}
+
+#scrolled-name {
+      position: relative;
+      top: -1.1em;
+      color: white;
+      margin: 0;
+      font-size: clamp(0.25rem, 5vw, 3rem);
+}
+
+.hidden {
+      opacity: 0;
+}
+.showing {
+      opacity: 1;
+      transition: opacity 800ms ease-in-out;
+}
+.onload-hide {
+      opacity: 0;
+}
+.onload-appear {
+      opacity: 1;
+}
+
+
+
+
+#topbar-button{
+      height: 100%;
+      width: 40%;
+      
+      color: white;
+      background: 0 0;
+      border: 0;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 0px;
+}
+#topbar-button:hover > #icon {
+      scale: 1.5;
+}
+
+#topbar-button:hover > #button-label {
+      scale: 1.1;
+      opacity: 1;
+}
+
+
+#topbar-button:hover > #icon > #icon-inner{
+      scale: 0.05;
+}
+
+#icon {
+      grid-column-start: 4;
+
+      margin: 0;
+      height: 40px;
+      width: 40px;
+      transform:rotate(45deg);
+      border: 1px white solid;
+
+      position: relative;
+      left: 60%;
+
+      display: flex;
+      justify-self: left;
+      
+      transition: scale 800ms ease;
+}
+#icon-inner {
+      margin: 0;
+      height: 40px;
+      width: 40px;
+      
+      border: 1px white solid;
+
+      position: relative;
+      transition: scale 800ms ease;
+}
+     
+
+#button-label {
+      grid-column-start: 3;
+
+
+      display: flex;
+      align-self: center;
+      justify-content: right;
+      opacity: 0.5;
+
+      transition: opacity 800ms ease, scale 800ms ease;
+}
+
