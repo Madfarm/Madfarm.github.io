@@ -134,7 +134,7 @@ body {
 main {
       padding: 0 10vw 0 10vw;
       background: radial-gradient(
-            600px circle at 160px 100px,
+            800px circle at 160px 100px,
             rgba(250, 214, 97, 0.4),
             transparent 40%
       );
@@ -164,10 +164,14 @@ main {
       
 }
 
+.card:hover::before {
+      opacity: 1;
+}
+
 .card::before {
       background: radial-gradient(
-            800px circle at 100px 100px,
-            rgba(255, 255, 255, 0.06),
+            800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.3),
             transparent 40%
       );
 
@@ -180,6 +184,12 @@ main {
 
       height: 100%;
       width: 100%;
+
+      opacity: 0;
+
+      transition: opacity 500ms; 
+
+      z-index: 2;
 
       
 }
