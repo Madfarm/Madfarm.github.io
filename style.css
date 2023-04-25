@@ -13,6 +13,9 @@ body {
       background-color: black;
       margin: 0px;
 }
+a {
+      z-index: 3;
+}
 
 #topbar{
     width: 100%;  

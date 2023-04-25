@@ -16,6 +16,14 @@ body {
       height: 100vh;
 }
 
+a {
+      text-decoration: none;
+      
+}
+a:visited {
+      color: white
+}
+
 #topbar{
     width: 100%;  
     z-index: 2;
@@ -171,7 +179,7 @@ main {
 .card::before {
       background: radial-gradient(
             800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.2),
             transparent 40%
       );
 
@@ -194,12 +202,46 @@ main {
       
 }
 
+.card-content {
+      color: white;
+      position: relative;
+      z-index: 3;
+}
+
+
+.project-title {
+      padding-left: 0.5rem;
+      margin-top: 10px;
+      margin-bottom: 0;
+      color: white;
+}
+
+.desc-list {
+      margin-top: 0;
+      list-style-type: none;
+      padding: 0.5rem;
+      color: gray;
+}
+
 #git-linkTop {
       height: 20%;
       border-bottom: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
 }
 
 #git-linkBottom {
       height: 80%;
       border-bottom: 2px solid black;
+}
+
+.fa-git {
+      z-index: 3;
+}
+
+.fa-git:hover {
+      scale: 1.5;
+      transition: scale 400ms ease;
 }
