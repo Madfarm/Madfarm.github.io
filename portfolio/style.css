@@ -12,9 +12,16 @@ html {
 body {
       background-color: black;
       margin: 0px;
+      padding: 0px;
+      height: 100vh;
 }
+
 a {
-      z-index: 3;
+      text-decoration: none;
+      
+}
+a:visited {
+      color: white
 }
 
 #topbar{
@@ -35,6 +42,7 @@ a {
       color: white;
       margin: 0;
       font-size: clamp(0.25rem, 5vw, 3rem);
+
       
       
 }
@@ -131,115 +139,109 @@ a {
 
       transition: opacity 800ms ease, scale 800ms ease;
 }
+main {
+      padding: 0 10vw 0 10vw;
+      background: radial-gradient(
+            800px circle at 160px 100px,
+            rgba(250, 214, 97, 0.4),
+            transparent 40%
+      );
+       
+}
 
+#spacer {
+      height: 30vh;
+}
 
-#menu {
-      height: 100vh;
+#cards {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: calc(100% - 20px);
+      
 }
 
-#menu-items {
-      margin-left: clamp(4rem, 20vw, 48rem);
+.card {
+      background-color: rgb(255, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255, 0.1);
+      height: 30vh;
+      width: 25vw;
+      border-radius: 15px;
+      cursor: pointer;
       position: relative;
-      z-index: 2;
+      
 }
 
-#menu-items:hover > .menu-item {
-      opacity: 0.3;
-}
-
-#menu-items:hover > .menu-item:hover {
+.card:hover::before {
       opacity: 1;
 }
 
-.menu-item {
-      color: white;
-      font-size: clamp(3rem, 8vw, 4rem);
-      /* Need to choose a font */
-
-      display: block;
-      text-decoration: none;
-      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
-      transition: opacity 400ms ease;
-}
-
-#menu-background{
-      height: 100vh;
-      width: 100vh;
-
-      background-attachment: fixed;
-      background-image: radial-gradient(
-            rgba(255, 255, 255, 0.1) 9%,
-            transparent 9%
+.card::before {
+      background: radial-gradient(
+            800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.2),
+            transparent 40%
       );
-      background-position: 0% 0%;
-      background-size: 12vmin 12vmin;
+
+      border-radius: inherit;
+      content: "";
 
       position: absolute;
-      left: 0px;
       top: 0px;
-      z-index: 1;
+      left: 0px;
 
-      transition: opacity 800ms ease, background-size 800ms ease
-}
-
-#menu-items:hover ~ #menu-background {
-      background-size: 11vmin 11vmin;
-      opacity: 0.5;
-}
-
-#menu > #menu-background {
-      background-position:  25% calc(-25% * (var(--active-index, 0) + 1));
-      transition: background-position 800ms ease;
-  }
-
-#menu-background-image {
       height: 100%;
       width: 100%;
 
-      background-image: url(https://images.unsplash.com/photo-1674483699209-25fb6d962119?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);
+      opacity: 0;
 
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      z-index: 0;
+      transition: opacity 500ms; 
 
-      background-attachment: fixed;
-      background-position: center 40%;
-      background-size: 100%;
-      opacity: 0.15;
+      z-index: 2;
 
-      transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+      
 }
 
-#menu-items:hover ~ #menu-background-image {
-      background-size: 100vmax;
-      opacity: 0.10;
-}
-
-#menu > #menu-background-image {
-      background-position: center calc(40% + 5% * var(--active-index, 0));
+.card-content {
+      color: white;
+      position: relative;
+      z-index: 3;
 }
 
 
+.project-title {
+      padding-left: 0.5rem;
+      margin-top: 10px;
+      margin-bottom: 0;
+      color: white;
+}
 
-#logo-row {
-      height: 4rem;
+.desc-list {
+      margin-top: 0;
+      list-style-type: none;
+      padding: 0.5rem;
+      color: gray;
+}
+
+#git-linkTop {
+      height: 20%;
+      border-bottom: 2px solid black;
       display: flex;
-
-      justify-content: left;
+      justify-content: center;
       align-items: center;
-      gap: 2em;
+      z-index: 2;
 }
-.fa-brands, .fa-solid{
-      transition: scale 400ms ease-in-out;
+
+#git-linkBottom {
+      height: 80%;
+      border-bottom: 2px solid black;
 }
-.fa-brands:hover, .fa-solid:hover  {
+
+.fa-git {
+      z-index: 3;
+}
+
+.fa-git:hover {
       scale: 1.5;
+      transition: scale 400ms ease;
 }
-
-main{
-      height: 10000px;
-}
-
