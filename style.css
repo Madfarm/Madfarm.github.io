@@ -242,7 +242,7 @@ a {
 }
 
 main{
-      height: 5000px;
+      height: 1000px;
 }
 
 .drip {
@@ -259,5 +259,9 @@ main{
 
 .layer2 {
       background-color: #a8a8a8;
-      height: 2000px;
+      height: 500px;
+}
+
+.layer3 {
+      background-image: url('./footer\ wave.svg');
 }
