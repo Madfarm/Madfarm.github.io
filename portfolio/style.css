@@ -221,6 +221,7 @@ main {
       list-style-type: none;
       padding: 0.5rem;
       color: gray;
+      font-family: 'Inconsolata', monospace;
 }
 
 #git-linkTop {
@@ -232,10 +233,22 @@ main {
       z-index: 2;
 }
 
-#git-linkBottom {
-      height: 80%;
-      border-bottom: 2px solid black;
+.card-contentBot {
+      height: 75%;
+      color: white;
+      position: relative;
+      z-index: 3;
 }
+
+#git-linkBottom {
+      border-top: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20%;
+}
+
+
 
 .fa-git {
       z-index: 3;
@@ -244,4 +257,15 @@ main {
 .fa-git:hover {
       scale: 1.5;
       transition: scale 400ms ease;
+}
+
+
+footer {
+      margin-top: 10px;
+
+      display: flex;
+      color: white;
+      justify-content: center;
+      font-size: 16px;
+      font-family: 'Inconsolata', monospace;
 }

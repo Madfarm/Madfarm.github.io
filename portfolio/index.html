@@ -8,6 +8,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="main.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/2bfdbc0c5c.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lora&display=swap" rel="stylesheet">
+
     <title>Portfolio</title>
 </head>
 
@@ -16,7 +21,7 @@
         <nav id="topbar">
             <div id="name-block">
                 <h1 id="name">
-                    < Portfolio>
+                    < Portfolio >
                 </h1>
             </div>
             <button id="topbar-button">
@@ -43,10 +48,10 @@
                     <a href="https://vichat-messaging-app.herokuapp.com/">
                         <h3 class="project-title">VICHAT</h2>
                             <ul class="desc-list">
-                                <li style="margin-bottom: 5px">Full-stack web application with friends list and full
+                                <li style="margin-bottom: 5px">Full-stack video chat application with friends list and full
                                     video and audio calling functionality</li>
                                 <li style="margin-bottom: 5px">Consumes a third-party API and an SDK</li>
-                                <li>Django, PostgresQL, Python, Tailwind, Tailwind, Heroku</li>
+                                <li>Django, PostgresQL, Python, Tailwind, Heroku, AWS, Javascript, SQL </li>
                             </ul>
                         </a>
                 </div>
@@ -54,26 +59,60 @@
             </div>
 
             <div class="card">
-                <div id="git-linkTop"></div>
+                <a href="https://github.com/Madfarm/Allrecipes-was-taken">
+                    <div id="git-linkTop">
+                        <i class="fa-brands fa-git fa-2xl" style="color: #ffffff;"></i>
+                    </div>
+                </a>
+
+                <div class="card-content">
+                    <a href="https://allrecipes-was-taken.herokuapp.com/">
+                        <h3 class="project-title">Allrecipes Was Taken</h2>
+                            <ul class="desc-list">
+                                <li style="margin-bottom: 5px">Full-stack CRUD web application that lets users upload and edit recipes. You can also leave reviews on other peoples' recipes with a rating</li>
+                                <li style="margin-bottom: 15px"></li>
+                                <li>MongoDB, Express.js, Node.js, Javascript</li>
+                            </ul>
+                        </a>
+                </div>
             </div>
 
             <div class="card">
-                <div id="git-linkTop"></div>
+                
             </div>
 
             <div class="card">
-                <div id="git-linkBottom"></div>
+                <div class="card-contentBot">
+                    <a href="https://madfarm.github.io/Minesweeper/">
+                        <h3 class="project-title" style="margin-bottom: 10px;">Minesweeper</h3>
+                        <ul class="desc-list">
+                            <li style="margin-bottom: 25px">Fully-featured minesweeper game with flood feature, flags, colored mine-count, a unique look, and dynamic board generation</li>
+                            <li>HTML, CSS, Javascript</li>
+                        </ul>
+                    </a>
+
+                </div>
+                <a href="https://github.com/Madfarm/Minesweeper">
+                <div id="git-linkBottom">
+                    <i class="fa-brands fa-git fa-2xl" style="color: #ffffff;"></i>
+                </div>
+                </a>
+                
             </div>
 
             <div class="card">
-                <div id="git-linkBottom"></div>
+                
             </div>
 
             <div class="card">
-                <div id="git-linkBottom"></div>
+                
             </div>
         </div>
     </main>
+
+    <footer>
+        <p>Click any card to head to that deployed project, and click 'Git' to go its code</p>
+    </footer>
 
 </body>
 
