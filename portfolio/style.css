@@ -232,10 +232,22 @@ main {
       z-index: 2;
 }
 
-#git-linkBottom {
+.card-contentBot {
       height: 80%;
-      border-bottom: 2px solid black;
+      color: white;
+      position: relative;
+      z-index: 3;
 }
+
+#git-linkBottom {
+      border-top: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20%;
+}
+
+
 
 .fa-git {
       z-index: 3;
