@@ -1,4 +1,5 @@
-console.log('ayoooo');
+const topbarBtn = document.getElementById('topbar-button');
+const hamburger = document.getElementById('hamburger');
 
 const handleMouseMove = (e) => {
     const { currentTarget: target } = e;
@@ -15,3 +16,13 @@ const handleMouseMove = (e) => {
 for(let card of document.querySelectorAll('.card')){
     card.onmousemove = e => handleMouseMove(e);
 }
+
+function handleTopMenu(e){
+    if (hamburger.style.display === "block"){
+        hamburger.style.display = "none";
+    } else {
+        hamburger.style.display = "block";
+    }
+}
+
+topbarBtn.addEventListener('click', handleTopMenu);
