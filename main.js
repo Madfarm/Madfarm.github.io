@@ -1,4 +1,6 @@
 const menu = document.getElementById('menu');
+const topbarBtn = document.getElementById('topbar-button');
+const hamburger = document.getElementById('hamburger');
 
 const title = document.getElementById('name');
 const scrolledTitle = document.getElementById('scrolled-name')
@@ -59,8 +61,15 @@ Array.from(document.getElementsByClassName("menu-item"))
     });
 
 
+function handleTopMenu(e){
+    if (hamburger.style.display === "block"){
+        hamburger.style.display = "none";
+    } else {
+        hamburger.style.display = "block";
+    }
+}
 
-
+topbarBtn.addEventListener('click', handleTopMenu);
 
 
 backgroundImageObserver.observe(backgroundImage);

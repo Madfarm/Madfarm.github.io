@@ -131,6 +131,10 @@ a {
       transition: opacity 800ms ease, scale 800ms ease;
 }
 
+#hamburger {
+      display: none;
+      position: absolute;
+}
 
 #menu {
       height: 100vh;
