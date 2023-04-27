@@ -153,14 +153,14 @@ a:visited {
      
       z-index: 4;
       
+      
       background-color: lightgray;
 
       height: 25vh;
       width: 20vw;
 
-      border-bottom-left-radius: 5%;
-      border-bottom-right-radius: 5%;
-      
+      border-radius: 5%;
+      border-top-right-radius: 0;
 }
 
 #hamburger a {
