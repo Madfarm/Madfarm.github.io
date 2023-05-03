@@ -287,7 +287,9 @@ a {
 }
 
 main{
-      height: 1000px;
+      height: auto;
+      margin: 0;
+      padding: 0;
 }
 
 .drip {
@@ -300,6 +302,48 @@ main{
 
 .layer1 {
       background-image: url('./drip2.svg');
+      /* border: 1px solid red; */
+
+      display: grid;
+      grid-template-columns: .5fr 1fr 1fr .5fr; 
+      grid-template-rows: .5fr .25fr 1fr;
+}
+
+.layer1 > h1 {
+      font-size: 4vw;
+      color: white;
+      
+      grid-column: 2 / span 2;
+      /* border: 1px solid red; */
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.languages {
+      color: white;
+      background-color: gray;
+      
+      grid-row: 3 / 3;
+      grid-column: 2 / 2;
+      /* border: 1px solid red; */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+
+.language-content {
+      color: white;
+      grid-row: 3 / 3;
+      grid-column: 3 / 3;
+      /* border: 1px solid red; */
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 }
 
 .layer2 {
