@@ -304,6 +304,7 @@ main{
       background-image: url('./drip2.svg');
       /* border: 1px solid red; */
 
+
       display: grid;
       grid-template-columns: .5fr 1fr 1fr .5fr; 
       grid-template-rows: .5fr .5fr 1fr;
@@ -348,10 +349,12 @@ main{
 }
 
 .layer2 {
+      aspect-ratio: 900/600;
       background-color: #a8a8a8;
-      height: 500px;
 }
 
 .layer3 {
+      aspect-ratio: 900/600;
       background-image: url('./footer\ wave.svg');
+
 }
