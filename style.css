@@ -351,7 +351,61 @@ main{
 .layer2 {
       aspect-ratio: 900/600;
       background-color: #a8a8a8;
+
+      display: grid;
+      grid-template-columns: .5fr 1fr 1fr .5fr; 
+      grid-template-rows: 1fr 1fr;
 }
+
+.libraries-content{
+      grid-row: 1 / 1;
+      grid-column: 2 / 2;
+
+      border: 1px solid red;
+}
+
+
+.libraries {
+      grid-row: 1 / 1;
+      grid-column: 3 / 3;
+      background-color: gray;
+
+      color: white;
+      background-color: gray;
+      opacity: 0.7;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: 1px solid red;
+}
+
+.cloud {
+      grid-row: 2 / 2;
+      grid-column: 2 / 2;
+      background-color: gray;
+
+      color: white;
+      background-color: gray;
+      opacity: 0.7;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: 1px solid red;
+}
+
+.cloud-content {
+      grid-row: 2 / 2;
+      grid-column: 3 / 3;
+
+      border: 1px solid red; 
+}
+
+
+
 
 .layer3 {
       aspect-ratio: 900/600;
