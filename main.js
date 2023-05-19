@@ -2,6 +2,8 @@ const menu = document.getElementById('menu');
 const topbarBtn = document.getElementById('topbar-button');
 const hamburger = document.getElementById('hamburger');
 
+const backToTopBtn = document.getElementById('back-to-top');
+
 const title = document.getElementById('name');
 const scrolledTitle = document.getElementById('scrolled-name')
 
@@ -24,21 +26,21 @@ const backgroundOptions = {
     rootMargin: "-250px 0px 0px 0px"
 };
 
-const backgroundImageObserver =  new IntersectionObserver(function(
+const backgroundImageObserver = new IntersectionObserver(function (
     entries,
 ) {
     entries.forEach(entry => {
-        if(!entry.isIntersecting){
-            
+        if (!entry.isIntersecting) {
+
             title.classList.remove('onload-appear');
 
             scrolledTitle.classList.toggle('showing');
             scrolledTitle.classList.toggle('hidden');
-            
+
 
             title.classList.toggle('showing');
             title.classList.toggle('hidden');
-            
+
             scrolledTitle.classList.remove('onload-hide');
 
         } else {
@@ -47,7 +49,7 @@ const backgroundImageObserver =  new IntersectionObserver(function(
 
             scrolledTitle.classList.toggle('hidden');
             scrolledTitle.classList.toggle('showing');
-            
+
 
         }
     })
@@ -61,15 +63,36 @@ Array.from(document.getElementsByClassName("menu-item"))
     });
 
 
-function handleTopMenu(e){
-    if (hamburger.style.display === "block"){
+function handleTopMenu(e) {
+    if (hamburger.style.display === "block") {
         hamburger.style.display = "none";
     } else {
         hamburger.style.display = "block";
     }
 }
 
+const goToTop = () => {
+    document.body.scrollIntoView({
+        behavior: "smooth"
+    });
+
+};
+
+const scrollContainer = () => {
+    return document.documentElement || document.body;
+};
+
+document.addEventListener("scroll", () => {
+    if (scrollContainer().scrollTop > 150) {
+        backToTopBtn.classList.remove("hidden")
+    } else {
+        backToTopBtn.classList.add("hidden")
+    }
+})
+
+
 topbarBtn.addEventListener('click', handleTopMenu);
+backToTopBtn.addEventListener('click', goToTop)
 
 
 backgroundImageObserver.observe(backgroundImage);
