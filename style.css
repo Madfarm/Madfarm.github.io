@@ -302,7 +302,7 @@ main{
 
 .layer1 {
       background-image: url('./drip2.svg');
-      /* border: 1px solid red; */
+    
 
 
       display: grid;
@@ -315,7 +315,7 @@ main{
       color: white;
       
       grid-column: 2 / span 2;
-      /* border: 1px solid red; */
+      
 
       display: flex;
       align-items: center;
@@ -328,7 +328,7 @@ main{
       
       grid-row: 3 / 3;
       grid-column: 2 / 2;
-      /* border: 1px solid red; */
+    
 
       display: flex;
       justify-content: center;
@@ -340,7 +340,7 @@ main{
       color: white;
       grid-row: 3 / 3;
       grid-column: 3 / 3;
-      /* border: 1px solid red; */
+      
 
       display: flex;
       flex-direction: column;
@@ -361,7 +361,7 @@ main{
       grid-row: 1 / 1;
       grid-column: 2 / 2;
 
-      border: 1px solid red;
+      /* border: 1px solid red; */
 
       display: flex;
 }
@@ -369,7 +369,7 @@ main{
 .content-inner {
       height: 100%;
       width: 50%;
-      border: 1px solid red;
+      /* border: 1px solid red; */
 
       color: white;
 
@@ -393,7 +393,7 @@ main{
       justify-content: center;
       align-items: center;
 
-      border: 1px solid red;
+      /* border: 1px solid red; */
 }
 
 .cloud {
@@ -409,14 +409,14 @@ main{
       justify-content: center;
       align-items: center;
 
-      border: 1px solid red;
+      /* border: 1px solid red; */
 }
 
 .cloud-content {
       grid-row: 2 / 2;
       grid-column: 3 / 3;
 
-      border: 1px solid red;
+      /* border: 1px solid red; */
       
       display: flex;
       flex-direction: column;
@@ -447,7 +447,7 @@ main{
       justify-content: center;
       align-items: center;
 
-      border: 1px solid red;
+      /* border: 1px solid red; */
 
       grid-column: 3/3;
 }
@@ -459,14 +459,42 @@ main{
       justify-content: center;
       align-items: center;
 
-      border: 1px solid red;
+      /* border: 1px solid red; */
 }
 
 .footer {
-      grid-column: 2 / 2;
+      grid-column: 2 / span 2;
       grid-row: 2 /2;
 
-      border: 1px solid red;
+      /* border: 1px solid red; */
 
       color: white;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+
+      
+}
+.footer-links {
+      margin-bottom: 2vh;
+      display: flex;
+
+      gap: 2vw;
+}
+
+.footer-links > a {
+      text-decoration: none;
+      color: white;
+      opacity: 0.7;
+}
+
+.footer-links > a:hover {
+      opacity: 1;
+}
+
+#footer-email {
+      border: 1px solid red;
+
+      margin-bottom: 2vh;
 }
