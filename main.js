@@ -86,8 +86,10 @@ const scrollContainer = () => {
 document.addEventListener("scroll", () => {
     if (scrollContainer().scrollTop > 150) {
         backToTopBtn.classList.remove("hidden")
+        scrollIndicator.classList.add("hidden");
     } else {
         backToTopBtn.classList.add("hidden")
+        scrollIndicator.classList.remove("hidden")
     }
 })
 
