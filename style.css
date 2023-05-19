@@ -316,6 +316,7 @@ main {
       border: none;
 
       cursor: pointer;
+      background-color: black;
 }
 
 .drip {
