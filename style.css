@@ -317,7 +317,41 @@ main {
 
       cursor: pointer;
       background-color: black;
+
+
 }
+
+#back-to-top:hover {
+      opacity: 80%;
+}
+
+#skill-indicator {
+      position: absolute;
+      color: white;
+      
+
+      bottom: 4vh;
+      right: 40%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+
+@keyframes down {
+      0% {opacity: 1;}
+      100% {
+            opacity: 0;
+            transform: translateY(20px);
+      }
+}
+
+#skill-indicator > i {
+      animation: down 800ms infinite;
+}
+
+
 
 .drip {
       aspect-ratio: 900/600;

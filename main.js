@@ -3,6 +3,7 @@ const topbarBtn = document.getElementById('topbar-button');
 const hamburger = document.getElementById('hamburger');
 
 const backToTopBtn = document.getElementById('back-to-top');
+const scrollIndicator = document.getElementById('skill-indicator');
 
 const title = document.getElementById('name');
 const scrolledTitle = document.getElementById('scrolled-name')
