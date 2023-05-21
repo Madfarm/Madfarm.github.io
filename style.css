@@ -317,8 +317,10 @@ main {
 
       cursor: pointer;
       background-color: black;
+}
 
-
+.bottom-style {
+      background-color: white;
 }
 
 #back-to-top:hover {
@@ -563,3 +565,5 @@ main {
 
       margin-bottom: 2vh;
 }
+
+

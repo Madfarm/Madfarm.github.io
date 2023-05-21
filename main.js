@@ -84,12 +84,20 @@ const scrollContainer = () => {
 };
 
 document.addEventListener("scroll", () => {
+    let currentScroll = window.scrollY + window.innerHeight;
+
     if (scrollContainer().scrollTop > 150) {
         backToTopBtn.classList.remove("hidden")
         scrollIndicator.classList.add("hidden");
     } else {
         backToTopBtn.classList.add("hidden")
         scrollIndicator.classList.remove("hidden")
+    }
+
+    if (currentScroll + 150 > document.body.scrollHeight){
+        backToTopBtn.style.backgroundColor = "gray";
+    } else {
+        backToTopBtn.style.backgroundColor = "black";
     }
 })
 
